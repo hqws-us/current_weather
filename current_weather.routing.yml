@@ -1,0 +1,41 @@
+current_weather.settings:
+  path: '/admin/config/services/weather'
+  defaults:
+    _form: '\Drupal\current_weather\Form\CurrentWeatherModuleSettingsForm'
+    _title: 'Current Weather Settings'
+  requirements:
+    _permission: 'access to configure current_weather module'
+
+current_weather.page:
+  path: '/weather'
+  defaults:
+    _controller: '\Drupal\current_weather\Controller\CurrentWeatherController::page'
+    _title_callback: '\Drupal\current_weather\Controller\CurrentWeatherController::pageTitle'
+  requirements:
+    _permission: 'access to current_weather page'
+
+current_weather.page.city:
+  path: '/weather/{city}'
+  defaults:
+    _controller: '\Drupal\current_weather\Controller\CurrentWeatherController::page'
+    _title_callback: '\Drupal\current_weather\Controller\CurrentWeatherController::pageTitle'
+  requirements:
+    _permission: 'access to current_weather page'
+  options:
+    parameters:
+      city:
+        type: string || int
+
+current_weather.page.city.country:
+  path: '/weather/{city}/{country}'
+  defaults:
+    _controller: '\Drupal\current_weather\Controller\CurrentWeatherController::page'
+    _title_callback: '\Drupal\current_weather\Controller\CurrentWeatherController::pageTitle'
+  requirements:
+    _permission: 'access to current_weather page'
+  options:
+    parameters:
+      city:
+        type: string || int
+      country:
+        type: string

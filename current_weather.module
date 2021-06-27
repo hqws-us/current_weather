@@ -1,0 +1,46 @@
+<?php
+
+/**
+ * @file
+ * Contains current_weather.module.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function current_weather_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the current_weather module.
+    case 'help.page.current_weather':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('Drupal 8 that module Current Weather from OpenWeatherMap.org') . '</p>';
+      return $output;
+
+    default:
+  }
+}
+
+/**
+ * Implements hook_theme().
+ */
+function current_weather_theme() {
+  return [
+    'current_weather' => [
+      'variables' => [
+        'city' => NULL,
+        'description' => NULL,
+        'icon_url' => NULL,
+        'temperature' => NULL,
+        'humidity' => NULL,
+        'wind_speed' => NULL,
+        'wind_speed_description' => NULL,
+        'wind_direction' => NULL,
+        'pressure' => NULL,
+        'clouds' => NULL,
+      ],
+    ],
+  ];
+}

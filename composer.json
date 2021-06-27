@@ -1,0 +1,25 @@
+{
+    "name": "drupal/current_weather",
+    "type": "drupal-module",
+    "description": "Drupal 8 that fetches Current Weather from Openweathermap.org",
+    "keywords": ["Drupal"],
+    "license": "GPL-2.0+",
+    "homepage": "https://github.com/osharkov/current_weather",
+    "minimum-stability": "dev",
+    "support": {
+        "issues": "https://github.com/osharkov/current_weather/issues",
+        "source": "https://github.com/osharkov/current_weather"
+    },
+    "authors": [
+        {
+            "name": "Alexander Sharkov",
+            "homepage": "https://github.com/osharkov/",
+            "role": "Maintainer"
+        }
+    ],
+    "require": {
+        "cmfcmf/openweathermap-php-api": "^3.2",
+        "http-interop/http-factory-guzzle": "^1.0",
+        "php-http/guzzle6-adapter": "^2.0 || ^1.0"
+    }
+}

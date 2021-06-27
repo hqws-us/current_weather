@@ -1,0 +1,27 @@
+# Schema for the configuration files of the Current Weather module.
+
+current_weather.settings:
+  type: config_entity
+  label: 'Current weather settings'
+  mapping:
+    status:
+      type: boolean
+      label: 'Status'
+    direct_id:
+      type: boolean
+      label: 'I know city id'
+    key:
+      type: string
+      label: 'OpenWeatherMap key'
+    country:
+      type: string
+      label: 'Country'
+    city:
+      type: string
+      label: 'City'
+    city_id:
+      type: int
+      label: 'City id'
+    units:
+      type: string
+      label: 'Units'

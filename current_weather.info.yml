@@ -1,0 +1,6 @@
+name: 'Current Weather'
+type: module
+description: 'Drupal 8 that fetches Current Weather from Open@eatherMap.org'
+core: 8.x
+core_version_requirement: ^8 || ^9
+package: 'Current Weather'

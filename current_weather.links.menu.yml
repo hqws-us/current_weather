@@ -1,0 +1,12 @@
+current_weather.page:
+  title: 'Current weather'
+  description: 'Display preconfigured weather from settings page.'
+  enabled: 1
+  route_name: current_weather.page
+  menu_name: main
+
+current_weather.settings:
+  title: 'Current weather'
+  description: 'Configuration page of Current Weather module.'
+  route_name: current_weather.settings
+  parent: system.admin_config_services

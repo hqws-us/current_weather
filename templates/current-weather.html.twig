@@ -1,0 +1,43 @@
+{#
+/**
+ * @file
+ * Default theme implementation to display a current weather information.
+ *
+ * Available variables:
+ * - city: City name and Country code.
+ * - description: Weather short description.
+ * - icon_url: Url to weather icon.
+ * - clouds: Clouds percentage.
+ * - temperature: Temperature value.
+ * - humidity: Humidity value.
+ * - wind_speed: Wind speed value.
+ * - wind_speed_description: Short description of Wind speed.
+ * - wind_direction: Wind direction description.
+ * - pressure: Pressure value.
+ *
+ * @ingroup themeable
+ */
+#}
+<div class="weather-info--wrapper">
+  {% if city is not empty %}
+    <h3 class="weather-info--city">{{ city }}</h3>
+  {% endif %}
+  {% if description is not empty %}
+    <div class="weather-info--description">{{ description }}</div>
+  {% endif %}
+  {% if icon_url is not empty and clouds is not empty %}
+    <div class="weather-info--icon"><img alt="{{ clouds }}" src="{{ icon_url }}"></div>
+  {% endif %}
+  {% if temperature is not empty %}
+    <h2 class="weather-info--temperature">{{ temperature }}</h2>
+  {% endif %}
+  {% if humidity is not empty %}
+    <div class="weather-info--humidity">{{ 'Humidity'|t }}: {{ humidity }}</div>
+  {% endif %}
+  {% if wind_speed is not empty and wind_speed_description is not empty%}
+    <div class="weather-info--wind">{{ 'Wind'|t }}: {{ wind_speed }} ({{ wind_speed_description }}) {{ wind_direction}}</div>
+  {% endif %}
+  {% if pressure is not empty %}
+    <div class="weather-info--pressure">{{ 'Pressure'|t }}: {{ pressure }}</div>
+  {% endif %}
+</div>

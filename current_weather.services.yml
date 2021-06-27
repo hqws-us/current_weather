@@ -1,0 +1,4 @@
+services:
+  current_weather.service:
+    class: Drupal\current_weather\Services\CurrentWeatherService
+    arguments: ['@config.factory', '@current_user']
